@@ -1,0 +1,8 @@
+model_id,label,so_luong
+pneunet_3class,COVID-19,43
+pneunet_3class,Normal,17
+pneunet_3class,Pneumonia,30
+pneunet_4class,Bacterial Pneumonia,50
+pneunet_4class,COVID-19,32
+pneunet_4class,Normal,6
+pneunet_4class,Viral Pneumonia,19

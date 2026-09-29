@@ -1,0 +1,191 @@
+/* ============================================================
+   AI-LungCare — Global Design System
+   Mọi component dùng var() từ đây, không hardcode màu
+   Giải thích tại sao làm vậy: Khi bạn muốn đổi màu toàn app từ xanh sang tím, 
+   bạn chỉ sửa dòng --text-accent ở file này — tất cả component sẽ tự cập nhật. 
+   Không phải đi tìm từng file.
+   ============================================================ */
+
+:root {
+    /* --- Màu nền --- */
+    --bg-main: #0f1117;
+    /* Nền toàn trang — tối nhất */
+    --bg-card: #1a1d27;
+    /* Nền card, panel */
+    --bg-hover: #22263a;
+    /* Nền khi hover */
+    --bg-input: #13161f;
+    /* Nền ô nhập liệu */
+
+    /* --- Màu chẩn đoán (mỗi nhãn 1 màu riêng) --- */
+    --color-normal: #6dbf6d;
+    /* Normal    → xanh lá */
+    --color-covid: #7eb8f7;
+    /* COVID-19  → xanh dương */
+    --color-pneumonia: #c49df5;
+    /* Pneumonia → tím */
+    --color-bacterial: #f5c96a;
+    /* Bacterial → vàng cam */
+    --color-viral: #f58a8a;
+    /* Viral     → đỏ hồng */
+
+    /* --- Màu text --- */
+    --text-primary: #e0e0e0;
+    /* Text chính */
+    --text-secondary: #9ca3af;
+    /* Text phụ, label */
+    --text-accent: #7eb8f7;
+    /* Text nổi bật, link */
+    --text-danger: #f58a8a;
+    /* Text lỗi */
+
+    /* --- Đường viền --- */
+    --border: #2d3148;
+    /* Border mặc định */
+    --border-focus: #7eb8f7;
+    /* Border khi focus input */
+
+    /* --- Bo góc --- */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+
+    /* --- Khoảng cách chuẩn --- */
+    --space-xs: 4px;
+    /*extra small*/
+    --space-sm: 8px;
+    /*small*/
+    --space-md: 16px;
+    /*medium*/
+    --space-lg: 24px;
+    /*large*/
+    --space-xl: 32px;
+    /*extra large*/
+
+    /* --- Transition mượt dùng chung --- */
+    --transition: all 0.2s ease;
+}
+
+/* ---- Reset cơ bản ---- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---- Body ---- */
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+    /* Tắt text bị vỡ xấu */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Typography cơ bản ---- */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    color: var(--text-accent);
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+p {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+/* ---- Scrollbar tối màu (cho Windows) ---- */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* ---- Utility classes dùng ở nhiều nơi ---- */
+
+/* Card — dùng cho mọi panel/box */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+}
+
+/* Badge nhãn chẩn đoán */
+.badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Nút chính */
+.btn-primary {
+    background: var(--text-accent);
+    color: #000;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    opacity: 0.88;
+}
+
+.btn-primary:disabled {
+    background: var(--border);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+}
+
+/* Loading spinner */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border);
+    border-top-color: var(--text-accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,3 @@
+# Thư mục này dùng để chứa ảnh upload từ người dùng khi chạy app.
+# Các file ảnh KHÔNG được commit lên GitHub (đã được .gitignore).
+# File này chỉ để đánh dấu thư mục cần tồn tại khi clone repo về.
