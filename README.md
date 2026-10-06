@@ -367,7 +367,7 @@ All training code is in `Code_train_model/test3/`. The `.txt` files contain Pyth
 
 # 🇻🇳 Bản Tiếng Việt
 
-Khóa luận tốt nghiệp — **Khoa Công nghệ Thông tin, Đại học Khoa học Tự nhiên TP.HCM**
+Khóa luận tốt nghiệp — **Khoa Điện tử - Viễn thông, Đại học Khoa học Tự nhiên TP.HCM**
 
 ## Giới thiệu
 
